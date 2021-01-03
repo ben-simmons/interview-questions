@@ -11,4 +11,4 @@ def knapsack(n, W, val, wt):
 
 
 if __name__ == "__main__":
-    print(knapsack())
+    knapsack()
