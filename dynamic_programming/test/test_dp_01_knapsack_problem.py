@@ -4,14 +4,11 @@ from dynamic_programming import dp_01_knapsack_problem as dp
 
 
 def naive_recurse(c, vals, wts):
-    return dp.Knapsack(c, vals, wts).naive_recurse()
-
-def naive_recurse_closure(c, vals, wts):
-    return dp.naive_recurse_closure(c, vals, wts)
+    return dp.ZeroOneKnapsack(c, vals, wts).naive_recurse()
 
 
-@pytest.mark.parametrize('func', [naive_recurse, naive_recurse_closure])
-class TestKnapsack:
+@pytest.mark.parametrize('func', [naive_recurse, dp.naive_recurse, dp.dp_recurse])
+class TestZeroOneKnapsack:
 
     def test_fits_all_exactly(self, func):
         vals = [5, 5, 5, 5]
