@@ -5,3 +5,10 @@
 ```
 pipenv install
 ```
+
+## Test
+
+```
+pipenv shell
+pytest
+```
