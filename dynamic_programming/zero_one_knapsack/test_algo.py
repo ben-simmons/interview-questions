@@ -1,13 +1,13 @@
 import pytest
 
-from dynamic_programming import dp_01_knapsack_problem as dp
+from dynamic_programming.zero_one_knapsack import algo
 
 
 def naive_recurse(c, vals, wts):
-    return dp.ZeroOneKnapsack(c, vals, wts).naive_recurse()
+    return algo.ZeroOneKnapsack(c, vals, wts).naive_recurse()
 
 
-@pytest.mark.parametrize('func', [naive_recurse, dp.naive_recurse, dp.dp_recurse])
+@pytest.mark.parametrize('func', [naive_recurse, algo.naive_recurse, algo.dp_recurse])
 class TestZeroOneKnapsack:
 
     def test_fits_all_exactly(self, func):
